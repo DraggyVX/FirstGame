@@ -10,6 +10,7 @@ public class CharMove : MonoBehaviour {
 
     //Player ground controls
     public Transform groundCheck;
+    public Transform rotation;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool grounded;
@@ -28,12 +29,15 @@ public class CharMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && grounded || Input.GetKeyDown(KeyCode.W) && grounded || Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
-            
             Jump();
+
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            //potatos are delicous 
+            // :D
+
 
         }
 

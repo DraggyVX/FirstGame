@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{68935561-146A-092C-1CE2-388EF65D57EF}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/rotation.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharMove.cs" Line="39" Column="18" />
+      <File FileName="Assets/Scripts/CharMove.cs" Line="77" Column="1" />
+      <File FileName="Assets/rotation.cs" Line="14" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

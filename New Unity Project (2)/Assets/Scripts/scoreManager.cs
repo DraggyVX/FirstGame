@@ -20,15 +20,18 @@ public class scoreManager : MonoBehaviour {
 	void Update () {
         if (score < 0) {
             score = 0;
-            ScoreText.text = " " + score;
         }
+
+            ScoreText.text = " " + score;
+        
 	}
 
     public static void AddPoints(int pointsToAdd) {
         score += pointsToAdd;
     }
-
+    /*
     public static void Reset () {
         score = 0;
     }
+    */
 }

@@ -23,7 +23,7 @@ public class EnemyControl : MonoBehaviour {
 
         //Defining variables
         notAtEdge = Physics2D.OverlapCircle(EdgeCheck.position, wallCheckRadius, whatIsWall);
-        hittingWall = Physics2D.OverlapCircle(EdgeCheck.position, wallCheckRadius, whatIsWall);
+        hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
 
         if (hittingWall || !notAtEdge) {
             moveRight = !moveRight;

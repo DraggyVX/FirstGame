@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour {
 
     public void RespawnPlayer()
     {
-        StartCoroutine("RespawnCharachter");
+        StartCoroutine("RespawnCharacter");
     }
 
     public IEnumerator RespawnPlayerCo(){
@@ -60,6 +60,8 @@ public class LevelManager : MonoBehaviour {
 
         //Match Players transform position
         PC.transform.position = currentCheckPoint.transform.position;
+
+        PC.GetComponent<Renderer>().enabled = true;
 
         Instantiate(respawnParticle, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
 

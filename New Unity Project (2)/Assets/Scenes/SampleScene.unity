@@ -312,9 +312,9 @@ GameObject:
   m_Component:
   - component: {fileID: 81307654}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -325,7 +325,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81307653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.075, z: 0}
+  m_LocalPosition: {x: 0.008, y: -0.113, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1393811976}
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &123831158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: 352}
+  m_AnchoredPosition: {x: -382.1, y: 379}
   m_SizeDelta: {x: 767.92, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161882808
@@ -700,7 +700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -772, y: 354}
+  m_AnchoredPosition: {x: -772, y: 381}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215935174
@@ -861,7 +861,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253270966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00332, y: 0.00259, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1393811976}
@@ -1145,6 +1145,7 @@ GameObject:
   - component: {fileID: 378468099}
   - component: {fileID: 378468098}
   - component: {fileID: 378468097}
+  - component: {fileID: 378468101}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Untagged
@@ -1277,6 +1278,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &378468101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378468095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c6b591230da4d9a82bc889190c23cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 1393811978}
 --- !u!1 &381142437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &381142441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1468,7 +1481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &450234764
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1744,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &568523619
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1947,7 +1960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &616819094
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2452,7 +2465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &901341239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3053,7 +3066,7 @@ GameObject:
   m_Layer: 0
   m_Name: CheckPoint_1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3064,7 +3077,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1148698549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4993222, y: 51.007496, z: 13.436709}
+  m_LocalPosition: {x: -3.27, y: 48.59, z: 13.436709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3127,7 +3140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1218153117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3582,7 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1386882284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3641,6 +3654,7 @@ GameObject:
   - component: {fileID: 1393811973}
   - component: {fileID: 1393811977}
   - component: {fileID: 1393811978}
+  - component: {fileID: 1393811979}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -3680,7 +3694,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010016948, y: -0.06376575}
+  m_Offset: {x: -0.010016948, y: -0.049558304}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3691,7 +3705,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2003, y: 0.19553149}
+  m_Size: {x: 0.2003, y: 0.22394638}
   m_EdgeRadius: 0
 --- !u!212 &1393811975
 SpriteRenderer:
@@ -3745,7 +3759,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393811972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 49.23, z: -70.5}
+  m_LocalPosition: {x: -7, y: 49.23036, z: -70.5}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 81307654}
@@ -3766,10 +3780,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  JumpHeight: 1
+  JumpHeight: 8
   groundCheck: {fileID: 81307654}
   rotation: {fileID: 81307654}
-  groundCheckRadius: 5
+  groundCheckRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -3791,6 +3805,18 @@ MonoBehaviour:
     type: 2}
   respawnDelay: 0
   lifePenaltyOnDeath: 0
+--- !u!114 &1393811979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1393811972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c6b591230da4d9a82bc889190c23cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 1393811978}
 --- !u!1 &1398746965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,7 +3874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1398746969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4225,7 +4251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1487818021
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4484,7 +4510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1622468768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4540,6 +4566,7 @@ GameObject:
   - component: {fileID: 1667376744}
   - component: {fileID: 1667376743}
   - component: {fileID: 1667376742}
+  - component: {fileID: 1667376745}
   m_Layer: 0
   m_Name: DeathBox
   m_TagString: Untagged
@@ -4590,12 +4617,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1667376741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 41.3, z: 0.023874134}
+  m_LocalPosition: {x: 5.4, y: 45.7, z: 0.023874134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1667376745
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1667376741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.7348099, y: -24.496021}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 141.08412, y: 1.9577789}
+  m_EdgeRadius: 0
 --- !u!1 &1706609823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,7 +4964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1864436392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5015,7 +5067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!212 &1889281150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5337,7 +5389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b24499e6f44498bf11906bba116cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 0
+  pointsToAdd: 100
 --- !u!1 &1969177975
 GameObject:
   m_ObjectHideFlags: 0
@@ -10167,6 +10219,8 @@ GameObject:
   - component: {fileID: 2076372680}
   - component: {fileID: 2076372679}
   - component: {fileID: 2076372683}
+  - component: {fileID: 2076372684}
+  - component: {fileID: 2076372685}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -10271,7 +10325,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076372678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.0331335, y: -12.635345, z: -1.0530491}
+  m_LocalPosition: {x: -12.0331335, y: -12.57, z: -1.0530491}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 1103818660}
@@ -10299,6 +10353,43 @@ MonoBehaviour:
     m_Bits: 768
   hittingWall: 0
   EdgeCheck: {fileID: 1706609824}
+--- !u!114 &2076372684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076372678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c6b591230da4d9a82bc889190c23cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 1393811978}
+--- !u!61 &2076372685
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076372678}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.024827689, y: -0.008761242}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.28}
+    newSize: {x: 0.36, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32202214, y: 0.27999625}
+  m_EdgeRadius: 0
 --- !u!1 &2092856944
 GameObject:
   m_ObjectHideFlags: 0
@@ -10311,6 +10402,7 @@ GameObject:
   - component: {fileID: 2092856948}
   - component: {fileID: 2092856947}
   - component: {fileID: 2092856946}
+  - component: {fileID: 2092856950}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Untagged
@@ -10443,6 +10535,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &2092856950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092856944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c6b591230da4d9a82bc889190c23cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 1393811978}
 --- !u!1 &2136048929
 GameObject:
   m_ObjectHideFlags: 0

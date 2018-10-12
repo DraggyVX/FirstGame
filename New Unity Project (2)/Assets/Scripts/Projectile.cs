@@ -24,17 +24,17 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.x);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
+
 	} //Ends Update
 
-	void OnTriggerEnter(Collider2D other) {
-        if (other.tag == "Enemy" || other.tag == "wall"){
+	void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Enemy"){
             Instantiate(enemyDeath, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
             scoreManager.AddPoints(pointsForKill);
 
         } //Ends if
-
         Instantiate(projectileParticle, transform.position, transform.rotation);
         Destroy(gameObject);
 

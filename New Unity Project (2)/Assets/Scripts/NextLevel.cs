@@ -12,8 +12,8 @@ public class NextLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.N)) {
-            SceneManager.LoadScene(sceneName: "Level2");
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            SceneManager.LoadScene(sceneName: "SampleScene");
         }
 	}
 }

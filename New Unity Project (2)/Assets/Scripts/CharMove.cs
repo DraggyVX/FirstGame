@@ -43,7 +43,7 @@ public class CharMove : MonoBehaviour {
 
         }
         
-        if (Input.GetKey(KeyCode.Space) && !doubleJump && !grounded){
+        if (Input.GetKey(KeyCode.Space) && !doubleJump && !grounded || Input.GetKey(KeyCode.W) && !doubleJump && !grounded){
             Jump();
             doubleJump = true;
 

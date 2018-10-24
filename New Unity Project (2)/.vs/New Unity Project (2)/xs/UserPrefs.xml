@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{68935561-146A-092C-1CE2-388EF65D57EF}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NextLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharMove.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharMove.cs" Line="72" Column="49" />
+      <File FileName="Assets/Scripts/CharMove.cs" Line="17" Column="27" />
       <File FileName="Assets/Scripts/scoreManager.cs" Line="24" Column="9" />
       <File FileName="Assets/Scripts/CoinPickup.cs" Line="9" Column="2" />
       <File FileName="Assets/Scripts/EnemyControl.cs" Line="25" Column="94" />
@@ -13,7 +13,7 @@
       <File FileName="Assets/Scripts/deathbox.cs" Line="7" Column="10" />
       <File FileName="Assets/Scripts/PlayerShoot.cs" Line="5" Column="43" />
       <File FileName="Assets/Scripts/Projectile.cs" Line="43" Column="28" />
-      <File FileName="Assets/Scripts/NextLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NextLevel.cs" Line="16" Column="57" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

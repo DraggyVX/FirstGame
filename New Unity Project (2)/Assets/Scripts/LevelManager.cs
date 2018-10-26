@@ -42,8 +42,8 @@ public class LevelManager : MonoBehaviour {
         //PC.enabled = false;
         PC.GetComponent<Renderer>().enabled = false;
 
-        gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
-        PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        //gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
+        //PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
         PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         //life penalty
@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour {
         yield return new WaitForSeconds(respawnDelay);
 
         //Gravity restore
-        PC.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+        //PC.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
 
         //Match Players transform position
         PC.transform.position = currentCheckPoint.transform.position;

@@ -24,13 +24,12 @@ public class Projectile : MonoBehaviour {
         } //Ends if
 
 	} //Ends Start
-	
+
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
         startTime += Time.deltaTime;
 	} //Ends Update
-
 
     void OnTriggerEnter2D(Collider2D other) {
         float Time = startTime;
@@ -42,8 +41,7 @@ public class Projectile : MonoBehaviour {
         } //Ends if
         else if (Time >= 2)
         {
-            Debug.Log("works.");
-            Destroy(gameObject);
+            Destroy(GameObject.Find("projectile(Clone)"));
             startTime = 0;
         }
         Instantiate(projectileParticle, transform.position, transform.rotation);

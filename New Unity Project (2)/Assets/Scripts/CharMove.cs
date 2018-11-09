@@ -17,12 +17,18 @@ public class CharMove : MonoBehaviour {
     private bool grounded;
  
     //potatos
+    public Sprite s3, s4, s5, s6, s7, s8, s9;
+    private int spriteNumber;
+    private SpriteRenderer spriteRenderer;
+    private float nextActionTime = 0;
+    public float period;
+
     //Non-slide/stick variable
     private float moveVelocity;
 
 	// Use this for initialization
 	void Start () {
-		
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	void FixedUpdate()
@@ -34,6 +40,7 @@ public class CharMove : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && grounded || Input.GetKeyDown(KeyCode.W) && grounded || Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
             Jump();
+
 
         }
 
@@ -77,6 +84,70 @@ public class CharMove : MonoBehaviour {
     //Function Jump
     public void Jump() {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+        while (Time.time > nextActionTime)
+        {
+            if (Time.time > nextActionTime)
+            {
+                if (spriteNumber == 1)
+                {
+                    spriteRenderer.sprite = s4;
+                    spriteNumber = 2;
+                }
+                else
+                {
+                    spriteRenderer.sprite = s3;
+                    spriteNumber = 1;
+                }
+                nextActionTime += period;
+            }
+        }
+
+        /*for (int i = 0; i < spriteNumber; i++){
+            if (i == 1 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s3;
+                spriteNumber++;
+                i++;
+            }
+            else if (i == 2 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s4;
+                spriteNumber++;
+                i++;
+            }
+            else if (i == 3 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s5;
+                spriteNumber++;
+                i++;
+            }
+            else if (i == 4 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s6;
+                spriteNumber++;
+                i++;
+            }
+            else if (i == 5 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s7;
+                spriteNumber++;
+                i++;
+            }
+            else if (i == 6 && Time.time > nextActionTime)
+            {
+                spriteRenderer.sprite = s8;
+                spriteNumber++;
+                i++;
+            }
+            else
+            {
+                spriteRenderer.sprite = s9;
+                spriteNumber = 1;
+                i++;
+            }
+            nextActionTime += period;
+        }
+        */
 
     }
 

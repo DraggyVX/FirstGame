@@ -14,6 +14,20 @@ public class PlayerShoot : MonoBehaviour {
 
     private int totalSpawnObjects = 0;
 
+    public float period;
+    private float nextActionTime = 0;
+
+    public Sprite s1, s2;
+
+    private int spriteNumber;
+    private SpriteRenderer spriteRenderer;
+
+    // Use this for initialization
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void FixedUpdate()
     {
         /*
@@ -30,6 +44,20 @@ public class PlayerShoot : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Mouse0) && totalSpawnObjects < 5) {
             totalSpawnObjects = totalSpawnObjects + 1;
             Instantiate(projectile, firePoint.position, firePoint.rotation);
+            if (Time.time > nextActionTime)
+            {
+                if (spriteNumber == 1)
+                {
+                    spriteRenderer.sprite = s2;
+                    spriteNumber = 2;
+                }
+                else
+                {
+                    spriteRenderer.sprite = s1;
+                    spriteNumber = 1;
+                }
+                nextActionTime += period;
+            }
            // Spawn();
         }
         if (GameObject.Find("projectile(Clone)"))

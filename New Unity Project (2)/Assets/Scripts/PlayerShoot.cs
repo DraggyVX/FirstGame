@@ -26,6 +26,7 @@ public class PlayerShoot : MonoBehaviour {
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        //projectile = Resources.Load("Prefabs/projectile") as GameObject;
     }
 
     private void FixedUpdate()

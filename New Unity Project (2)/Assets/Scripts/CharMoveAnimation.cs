@@ -8,7 +8,7 @@ public class CharMoveAnimation : MonoBehaviour {
     private float nextActionTime = 0;
 
     public Sprite s1, s2;
-    public Sprite s3, s4, s5, s6, s7, s8, s9, s10;
+    //public Sprite s3, s4, s5, s6, s7, s8, s9, s10;
 
     private int spriteNumber;
     private SpriteRenderer spriteRenderer;

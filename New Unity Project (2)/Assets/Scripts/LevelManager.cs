@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour {
 
     public Rigidbody2D PC;
 
-    public GameObject PC2;
+    //public GameObject PC2;
 
     //Particles
     public GameObject deathParticle;
@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
         //PC = FindObjectOfType<Rigidbody2D>();
         PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
-        PC2 = GameObject.Find("PC");
+        //PC2 = GameObject.Find("PC");
 	}
 
     public void RespawnPlayer()
@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour {
 
         //Hide Player
         //PC.enabled = false;
-        PC2.SetActive(false);
+        //PC2.SetActive(false);
         PC.GetComponent<Renderer>().enabled = false;
 
         //gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour {
 
         //Match Players transform position
         PC.transform.position = currentCheckPoint.transform.position;
-        PC2.SetActive(true);
+        //PC2.SetActive(true);
         PC.GetComponent<Renderer>().enabled = true;
         Instantiate(respawnParticle, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
 

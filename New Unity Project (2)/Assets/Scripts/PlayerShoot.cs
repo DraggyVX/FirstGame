@@ -29,52 +29,25 @@ public class PlayerShoot : MonoBehaviour {
         //projectile = Resources.Load("Prefabs/projectile") as GameObject;
     }
 
-    private void FixedUpdate()
-    {
-        /*
-        if (NextAction <= Time.time)
-        {
-            Destroy(GameObject.Find("projectile(Clone)"));
-        }
-        */
-
-    }
-
 	// Update is called once per frame
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Mouse0) && totalSpawnObjects < 5) {
-            totalSpawnObjects = totalSpawnObjects + 1;
             Instantiate(projectile, firePoint.position, firePoint.rotation);
-            if (Time.time > nextActionTime)
-            {
-                if (spriteNumber == 1)
-                {
+            if (Time.time > nextActionTime) {
+                if (spriteNumber == 1) {
                     spriteRenderer.sprite = s2;
                     spriteNumber = 2;
                 }
-                else
-                {
+                else {
                     spriteRenderer.sprite = s1;
                     spriteNumber = 1;
                 }
                 nextActionTime += period;
+                
             }
-           // Spawn();
-        }
-        if (GameObject.Find("projectile(Clone)"))
-        {
-            Destroy(GameObject.Find("projectile(Clone)"), Period);
-
-        }
-        if (totalSpawnObjects >= 5 && NextAction <= Time.time){
-            totalSpawnObjects--;
-        }
-
+            
+        } 
+        
 	}
-    /*
-    void Spawn()
-    {
-        NextAction = (Time.time + Period);
-    }
-    */
+    
 }

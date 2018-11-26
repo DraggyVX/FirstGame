@@ -16,8 +16,6 @@ public class Projectile : MonoBehaviour {
 
     public int pointsForKill;
 
-    //public float startTime = 0; //makes a time variable
-
 	// Use this for initialization
 	void Start () {
         PC = GameObject.Find("PC");
@@ -29,14 +27,13 @@ public class Projectile : MonoBehaviour {
         if (PC.transform.localScale.x < 0) {
             speed = -speed;
         } //Ends if
-        Destroy(gameObject, timeOut); //.Find("projectile(Clone)")
+        Destroy(gameObject, timeOut); 
 
 	} //Ends Start
 
 	// Update is called once per frame
 	void Update () {
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
-        //startTime += Time.deltaTime; //adds time to time
 	} //Ends Update
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -47,15 +44,7 @@ public class Projectile : MonoBehaviour {
             scoreManager.AddPoints(pointsForKill);
 
         } //Ends if
-        //Destroy(GameObject.Find("projectile(Clone)"), timeOut);
-        /*
-        else if (time >= 1) { // destroys the clone
-            Destroy(GameObject.Find("projectile(Clone)"));
-            startTime = 0;
-        } //Ends else if
-*/
-
-        //Instantiate(projectileParticle, transform.position, transform.rotation);
+        
         Destroy(gameObject);
 
 	} //Ends OnTriggerEnter

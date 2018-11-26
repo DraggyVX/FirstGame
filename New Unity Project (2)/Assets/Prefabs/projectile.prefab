@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 58689827911322170}
   - component: {fileID: 114838303761444508}
   - component: {fileID: 50014571161262936}
+  - component: {fileID: 114713663573803730}
+  - component: {fileID: 114110570562215848}
   m_Layer: 0
   m_Name: projectile
   m_TagString: Projectile
@@ -78,6 +80,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.03844026
+--- !u!114 &114110570562215848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151442725248312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c363c546ff7684a8c8cc90bdba438462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointsToAdd: 100
+  DestroyDelay: 2
+--- !u!114 &114713663573803730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151442725248312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f9d0a0016164984935fd9f0dea354d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDelay: 2
 --- !u!114 &114838303761444508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,13 +117,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  timeOut: 1
-  PC: {fileID: 0}
+  timeOut: 2
+  PC: {fileID: 1943460809092894, guid: b9404b2e76d204db6859890f7329597b, type: 2}
   enemyDeath: {fileID: 1830088532504992, guid: 3aa243ac01a474992a531f95db0a3603, type: 2}
   projectileParticle: {fileID: 1050369792211146, guid: 24cdbf87581a6438f88004f2c1305c3a,
     type: 2}
   pointsForKill: 150
-  startTime: 0
 --- !u!212 &212406071536649884
 SpriteRenderer:
   m_ObjectHideFlags: 1

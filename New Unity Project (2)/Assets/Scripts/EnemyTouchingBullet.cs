@@ -7,8 +7,8 @@ public class EnemyTouchingBullet : MonoBehaviour {
 	public int PointsToAdd;
     public float DestroyDelay;
     
-    void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.layer == 0) {
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.layer == 11) {
             scoreManager.AddPoints(PointsToAdd);
             Destroy(gameObject, DestroyDelay);
         }

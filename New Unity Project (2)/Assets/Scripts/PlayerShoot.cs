@@ -12,7 +12,7 @@ public class PlayerShoot : MonoBehaviour {
 
     private float NextAction = 0;
 
-    private int totalSpawnObjects = 0;
+    public static int totalSpawnObjects;
 
     public float period;
     private float nextActionTime = 0;
@@ -33,6 +33,7 @@ public class PlayerShoot : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Mouse0) && totalSpawnObjects < 5) {
             Instantiate(projectile, firePoint.position, firePoint.rotation);
+            //totalSpawnObjects++; add once added
             if (Time.time > nextActionTime) {
                 if (spriteNumber == 1) {
                     spriteRenderer.sprite = s2;

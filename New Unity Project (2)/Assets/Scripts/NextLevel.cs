@@ -9,11 +9,15 @@ public class NextLevel : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            SceneManager.LoadScene(sceneName: "SampleScene");
-        }
+    public void OnTriggerEnter(Collider other) {
+        //if (Input.GetKeyDown(KeyCode.F)) {
+            SceneManager.LoadScene("LvL1");
+        //}
+    }
+    // Update is called once per frame
+    void Update () {
+
 	}
+
+    
 }

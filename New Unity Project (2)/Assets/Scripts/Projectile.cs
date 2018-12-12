@@ -16,6 +16,10 @@ public class Projectile : MonoBehaviour {
 
     public int pointsForKill;
 
+    public int pointsForBossKill;
+
+    public int lifeOfBoss;
+
 	// Use this for initialization
 	void Start () {
         PC = GameObject.Find("PC");
@@ -45,7 +49,19 @@ public class Projectile : MonoBehaviour {
             scoreManager.AddPoints(pointsForKill);
 
         } //Ends if
-        
+
+        else if (other.tag == "Boss") {
+            if(lifeOfBoss <= 0) {
+                Instantiate(enemyDeath, other.transform.position, other.transform.rotation);
+                Destroy(other.gameObject);
+                scoreManager.AddPoints(pointsForBossKill);
+            }
+            else
+            {
+
+            }
+        }
+
         Destroy(gameObject);
 
 	} //Ends OnTriggerEnter

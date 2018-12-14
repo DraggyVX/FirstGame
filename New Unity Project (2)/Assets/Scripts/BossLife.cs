@@ -8,11 +8,6 @@ public class BossLife : MonoBehaviour {
     public int PointsToAdd;
     public float DestroyDelay;
 
-	// Use this for initialization
-	void Start () {
-        Health = 100;
-	}
-
     private void OnCollisionEnter2D(Collision2D collision) {
         if (Health <= 10 && collision.gameObject.layer == 11) {
             scoreManager.AddPoints(PointsToAdd);

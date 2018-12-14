@@ -123,6 +123,8 @@ MonoBehaviour:
   projectileParticle: {fileID: 1050369792211146, guid: 24cdbf87581a6438f88004f2c1305c3a,
     type: 2}
   pointsForKill: 150
+  pointsForBossKill: 500
+  dmgProjectile: 0
 --- !u!212 &212406071536649884
 SpriteRenderer:
   m_ObjectHideFlags: 1

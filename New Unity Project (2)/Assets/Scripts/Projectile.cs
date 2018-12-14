@@ -18,10 +18,13 @@ public class Projectile : MonoBehaviour {
 
     public int pointsForBossKill;
 
-    public int lifeOfBoss;
+    private int lifeOfBoss;
+
+    public int dmgProjectile;
 
 	// Use this for initialization
 	void Start () {
+        lifeOfBoss = 100;
         PC = GameObject.Find("PC");
 
         enemyDeath = Resources.Load("Prefabs/deathParticle") as GameObject;
@@ -57,9 +60,8 @@ public class Projectile : MonoBehaviour {
                 scoreManager.AddPoints(pointsForBossKill);
             }
             else
-            {
-
-            }
+           lifeOfBoss = lifeOfBoss - dmgProjectile;
+            
         }
 
         Destroy(gameObject);

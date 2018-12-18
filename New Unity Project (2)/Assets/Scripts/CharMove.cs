@@ -31,8 +31,7 @@ public class CharMove : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
-	void FixedUpdate()
-	{
+	void FixedUpdate() {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 	}
 
@@ -40,7 +39,6 @@ public class CharMove : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown (KeyCode.Space) && grounded || Input.GetKeyDown(KeyCode.W) && grounded || Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
             Jump();
-
 
         }
 
@@ -72,17 +70,18 @@ public class CharMove : MonoBehaviour {
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
-        if (GetComponent<Rigidbody2D>().velocity.x > 0){
+        if (GetComponent<Rigidbody2D>().velocity.x > 0) {
             transform.localScale = new Vector3(5f, 5f, 5f);
         }
+
         else if (GetComponent<Rigidbody2D>().velocity.x < 0) {
             transform.localScale = new Vector3(-5f, 5f, 5f);
         }
 
 	}
 
-    //Function Jump
-    public void Jump() {
+   //Function Jump
+   public void Jump() {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
         while (Time.time > nextActionTime)
         {
@@ -101,53 +100,6 @@ public class CharMove : MonoBehaviour {
                 nextActionTime += period;
             }
         }
-
-        /*for (int i = 0; i < spriteNumber; i++){
-            if (i == 1 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s3;
-                spriteNumber++;
-                i++;
-            }
-            else if (i == 2 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s4;
-                spriteNumber++;
-                i++;
-            }
-            else if (i == 3 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s5;
-                spriteNumber++;
-                i++;
-            }
-            else if (i == 4 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s6;
-                spriteNumber++;
-                i++;
-            }
-            else if (i == 5 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s7;
-                spriteNumber++;
-                i++;
-            }
-            else if (i == 6 && Time.time > nextActionTime)
-            {
-                spriteRenderer.sprite = s8;
-                spriteNumber++;
-                i++;
-            }
-            else
-            {
-                spriteRenderer.sprite = s9;
-                spriteNumber = 1;
-                i++;
-            }
-            nextActionTime += period;
-        }
-        */
 
     }
 

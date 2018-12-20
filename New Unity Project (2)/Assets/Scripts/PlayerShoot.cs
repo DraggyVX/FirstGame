@@ -17,7 +17,7 @@ public class PlayerShoot : MonoBehaviour {
     public float period;
     private float nextActionTime = 0;
 
-    public Sprite s1, s2;
+    public Animator animator;
 
     private int spriteNumber;
     private SpriteRenderer spriteRenderer;
@@ -33,22 +33,17 @@ public class PlayerShoot : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Mouse0) && totalSpawnObjects < 5) {
             Instantiate(projectile, firePoint.position, firePoint.rotation);
+            animator.SetBool("isAttacking", true);
             //totalSpawnObjects++; add once added
-            if (Time.time > nextActionTime) {
-                if (spriteNumber == 1) {
-                    spriteRenderer.sprite = s2;
-                    spriteNumber = 2;
-                }
-                else {
-                    spriteRenderer.sprite = s1;
-                    spriteNumber = 1;
-                }
-                nextActionTime += period;
-                
+
             }
-            
-        } 
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            animator.SetBool("isAttacking", false);
+        }
+
+    } 
         
 	}
     
-}
+

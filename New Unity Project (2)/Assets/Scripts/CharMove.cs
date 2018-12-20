@@ -15,11 +15,12 @@ public class CharMove : MonoBehaviour {
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool grounded;
+    public Animator animator;
  
     //potatos
-    public Sprite s3, s4;
-    private int spriteNumber;
-    private SpriteRenderer spriteRenderer;
+    //public Sprite s3, s4;
+    //private int spriteNumber;
+    //private SpriteRenderer spriteRenderer;
     private float nextActionTime = 0;
     public float period;
 
@@ -28,7 +29,7 @@ public class CharMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	void FixedUpdate() {
@@ -47,7 +48,16 @@ public class CharMove : MonoBehaviour {
             doubleJump = false;
 
         }
-        
+        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+        {
+            Jump();
+            doubleJump = true;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator.SetBool("isJumping", false);
+        }
+
         if (Input.GetKey(KeyCode.Space) && !doubleJump && !grounded || Input.GetKey(KeyCode.W) && !doubleJump && !grounded){
             Jump();
             doubleJump = true;
@@ -57,15 +67,29 @@ public class CharMove : MonoBehaviour {
         moveVelocity = 0f;
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-            //GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
             moveVelocity = MoveSpeed;
-
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-            // GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
             moveVelocity = -MoveSpeed;
 
+        }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+
+            moveVelocity = MoveSpeed;
+            animator.SetBool("isWalking", true);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            moveVelocity = -MoveSpeed;
+            animator.SetBool("isWalking", true);
+
+        }
+        else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {
+            animator.SetBool("isWalking", false);
         }
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
@@ -83,23 +107,24 @@ public class CharMove : MonoBehaviour {
    //Function Jump
    public void Jump() {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
-        while (Time.time > nextActionTime)
-        {
-            if (Time.time > nextActionTime)
-            {
-                if (spriteNumber == 1)
-                {
-                    spriteRenderer.sprite = s4;
-                    spriteNumber = 2;
-                }
-                else
-                {
-                    spriteRenderer.sprite = s3;
-                    spriteNumber = 1;
-                }
-                nextActionTime += period;
-            }
-        }
+        animator.SetBool("isJumping", true);
+        //while (Time.time > nextActionTime)
+        //{
+            //if (Time.time > nextActionTime)
+            //{
+            //    if (spriteNumber == 1)
+            //    {
+            //        spriteRenderer.sprite = s4;
+            //        spriteNumber = 2;
+            //    }
+            //    else
+            //    {
+            //        spriteRenderer.sprite = s3;
+            //        spriteNumber = 1;
+            //    }
+            //    nextActionTime += period;
+            //}
+        //}
 
     }
 

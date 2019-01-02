@@ -484,7 +484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press Enter to Start
+  m_Text: 'Click to Start
 
 '
 --- !u!222 &536557853
@@ -5407,8 +5407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.46741557, y: 0.47834957}
   m_AnchorMax: {x: 0.46741557, y: 0.47834957}
-  m_AnchoredPosition: {x: 110, y: 87}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 101.3, y: 87}
+  m_SizeDelta: {x: 557.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735464627
 MonoBehaviour:
@@ -5442,7 +5442,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome To Jump!
+  m_Text: Welcome To Lumberjack Cat
 --- !u!222 &1735464628
 CanvasRenderer:
   m_ObjectHideFlags: 0

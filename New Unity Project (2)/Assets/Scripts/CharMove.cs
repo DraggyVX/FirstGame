@@ -48,12 +48,12 @@ public class CharMove : MonoBehaviour {
             doubleJump = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded || Input.GetKeyDown(KeyCode.W) && !doubleJump && !grounded)
         {
             Jump();
             doubleJump = true;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W))
         {
             animator.SetBool("isJumping", false);
         }

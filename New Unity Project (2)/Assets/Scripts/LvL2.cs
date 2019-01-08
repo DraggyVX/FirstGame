@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LvL2 : MonoBehaviour {
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-
+    public void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.layer != 0 && other.gameObject.layer != 11)
         SceneManager.LoadScene("LvL2");
 
     }
